@@ -1,27 +1,43 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.woff') format('woff')
+}
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Myriad Pro Regular";
+}
+
+:root {
+  --primary-color: #4891ff;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fbfbf7;
+  overflow-x: hidden;
+}
+
+#landing-1 {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn-shadow:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
   }
-  
-  :root {
-    --primary-color: #4891ff;
-    --light-color: #f4f4f6;
-    --dark-color: #111;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background: #fff;
-    overflow-x: hidden;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 960px) {
-    .text-xxl {
-      font-size: 2.5rem;
-    }
-  }
-  
+}
