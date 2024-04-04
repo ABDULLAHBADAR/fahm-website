@@ -244,8 +244,17 @@ body {
                 linear-gradient(to bottom, rgba(0, 0, 0, 0) 5%, black) 1;
 } */
 
-/* @media (max-width: 780px) {
-  body{
+
+/* Chnages related to responsiveness */
+.screen-sm {
+  display: none;
+}
+
+.screen-md{
+  display: none;
+}
+@media (max-width: 1000px) {
+  /* body{
     height: auto;
     overflow: scroll;
   }
@@ -256,5 +265,32 @@ body {
   .slider .image {
     height: auto;
     overflow: scroll;
+  } */
+  .screen-sm {
+    display: block;
   }
-} */
+  .screen-md{
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* body{
+    height: auto;
+    overflow: scroll;
+  }
+  .slider{
+    height: 100vh;
+    overflow: scroll;
+  }
+  .slider .image {
+    height: auto;
+    overflow: scroll;
+  } */
+  .screen-sm {
+    display: none;
+  }
+  .screen-md{
+    display: block;
+  }
+}
