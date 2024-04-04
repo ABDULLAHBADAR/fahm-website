@@ -21,71 +21,418 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"
+      integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
-    <div class="row p-2 px-4" id="landing-1">
-      <div class="landing-1-description p-2 col-md-6">
-        <div class="header">
-          <img class="logo-img col-md-2" src="./images/Fahm-logos_black.png" alt="logo" />
-        </div>
-        <div class="landing-1-description px-3 mt-4">
-          <h1 style="color: #383838; font-size: 3vw;">
-            Understand your client using
-          </h1>
-          <h1 style="font-size: 8vw; color: #ee3f0a;">
-            User-Centric Strategy
-          </h1>
-          <p style="font-size: 20px; color: #383838;">
-            In today's competitive market, building products and services people love requires a deep understanding of their needs, motivations, and pain points.
-            That's where Fahm comes in.
-            <span style="color: #ee3f0a;">
-              We're a user research agency dedicated to helping businesses like yours unlock the power of user-centric design.
-            </span>Through strategic research and data-driven insights, we bridge the gap between your brand and your ideal customer.
-          </p>
-          <div class="buttons d-flex flex-row">
-            <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
-              <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
-                Contact Us
-              </p>
-            </div>
-            <div class="mx-2">
-            </div>
-            <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
-              <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
-                Contact Us
-              </p>
-            </div>
-          </div>
-          <div class="d-flex flex-column my-3">
-            <span style="font-size: 22px; color: #383838; opacity: 0.4;">
-              Any Requirements?
-            </span>
-            <span style="font-size: 20px; font-weight: 500;">
-              Call +01-878787-12345
-            </span>
-          </div>
-        </div>
+    <div class="slider" data-state="0">
+      <div class="status">
+        <div class="point" data-current="0"></div>
+        <div class="stat" data-key="0"></div>
+        <div class="stat" data-key="1"></div>
+        <div class="stat" data-key="2"></div>
+        <div class="stat" data-key="3"></div>
+        <!-- <div class="stat" data-key="4"></div> -->
+        <!-- <div class="stat" data-key="5"></div> -->
       </div>
-      <!-- images section of Lanidng-1 -->
-      <div class="landing-1-assets col-md-6 h-100 jusify-content-center align-items-center" style="padding-top: 150px;">
-        <div class="d-flex flex-column">
-          <div style="position: relative;" class="d-flex flex-row">
-            <img class="h-100 w-75" style="margin-top: -50px; width: 550px; margin-left: 50px;" src="./images/Screenshot (15).png" alt="logo" />
-            <div style="margin-top: -100px;">
-              <img class="w-75" style="margin-left: -100%;" src="./images/Screenshot (18).png" alt="logo" />
-            </div>
-            <!-- <div class="align-self-end">
-              <div class="w-25 h-25" style="margin-right: 10vw; position: absolute;">
-                <img class="w-50" src="./images/Screenshot (18).png" alt="logo" />
+
+      <div class="text">
+        <div class="current" data-key="0"></div>
+        <div data-key="1"></div>
+        <div data-key="2"></div>
+        <div data-key="3"></div>
+        <!-- <div data-key="4"></div> -->
+        <!-- <div data-key="5"></div> -->
+      </div>
+
+      <div class="image current" data-key="0">
+        <section>
+          <div class="row p-2 px-4" id="landing-1">
+            <div class="landing-1-description p-2 col-md-6">
+              <div class="header col-md-3">
+                <div class="d-flex flex-row" style="position: relative;">
+                  <img class="logo-img col-md-9" src="./images/Fahm-logos_black.png" alt="logo" />
+                  <div class="logo-side"></div>
+                </div>
+                <div class="col-md-12">
+                  <hr class="logo-bottom">
+                </div>
               </div>
-            </div> -->
+              <div class="landing-1-description px-3 mt-4">
+                <div class="center-hr-line">
+                </div>
+                <div class="bottom-hr-line">
+                </div>
+                <h1 style="color: #383838; font-size: 3vw;">
+                  Understand your client using
+                </h1>
+                <h1 style="font-size: 8vw; color: #ee3f0a; line-height: 100%;">
+                  User-Centric Strategy
+                </h1>
+                <p style="font-size: 20px; color: #383838;">
+                  In today's competitive market, building products and services people love requires a deep understanding of their needs, motivations, and pain points.
+                  That's where Fahm comes in.
+                  <span style="color: #ee3f0a;">
+                    We're a user research agency dedicated to helping businesses like yours unlock the power of user-centric design.
+                  </span>Through strategic research and data-driven insights, we bridge the gap between your brand and your ideal customer.
+                </p>
+                <div class="buttons d-flex flex-row">
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                  <div class="mx-2">
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- images section of Lanidng-1 -->
+            <div class="landing-1-assets col-md-6 h-100 jusify-content-center align-items-center" style="padding-top: 150px;">
+              <div class="d-flex flex-column">
+                <div style="position: relative;" class="d-flex flex-row">
+                  <img class="h-100 w-75" style="margin-top: -50px; width: 550px; margin-left: 50px;" src="./images/Screenshot (15).png" alt="logo" />
+                  <div style="margin-top: -100px;">
+                    <img class="w-75" style="margin-left: -100%;" src="./images/Screenshot (18).png" alt="logo" />
+                  </div>
+                </div>
+                <div class="my-5 row">
+                  <img class="col-md-8" src="./images/Screenshot (16).png" alt="logo" />
+                  <img class="col-md-4" style="margin-bottom: -40px; margin-top: 40px;" src="./images/Screenshot (17).png" alt="logo" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="my-5 row">
-            <img class="col-md-8" src="./images/Screenshot (16).png" alt="logo" />
-            <img class="col-md-4" style="margin-bottom: -40px; margin-top: 40px;" src="./images/Screenshot (17).png" alt="logo" />
+          <div style="position: absolute; bottom: 0;">
+            <div class="d-flex flex-column mx-5 p-2 pe-5 req-section">
+              <span style="font-size: 22px; color: #383838; opacity: 0.4;">
+                Any Requirements?
+              </span>
+              <span style="font-size: 20px; font-weight: 500;">
+                Call +01-878787-12345
+              </span>
+            </div>
           </div>
+        </section>
+      </div>
+      <!-- Section 2 -->
+      <div class="image" data-key="1">
+        <section>
+          <div class="row p-2 px-4" id="landing-2">
+            <div class="landing-1-description p-2 col-md-6">
+              <div class="header col-md-3">
+                <div class="d-flex flex-row" style="position: relative;">
+                  <img class="logo-img col-md-9" src="./images/Fahm-logos_black.png" alt="logo" />
+                  <div class="logo-side"></div>
+                </div>
+                <div class="col-md-12">
+                  <hr class="logo-bottom">
+                </div>
+              </div>
+              <div class="landing-1-description px-3 mt-4">
+                <div class="center-hr-line">
+                </div>
+                <div class="bottom-hr-line">
+                </div>
+                <h1 style="color: #383838; font-size: 2.5vw;">
+                  Understand hidden insights using
+                </h1>
+                <h1 style="font-size: 8vw; color: #ee3f0a; line-height: 100%;">
+                  User-Testing Strategy
+                </h1>
+                <p style="font-size: 22px; color: #383838;">
+                  Transform your digital experiences with our expert user testing and <br> feedback services. <br>
+                  We go beyond surface-level data. Through user testing, interviews, usability testing, and other methodologies, we uncover the real "why" behind user behavior and needs.
+                </p>
+                <div class="buttons d-flex flex-row">
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                  <div class="mx-2">
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- images section of Lanidng-1 -->
+            <div class="landing-1-assets col-md-6 h-100 jusify-content-center align-items-center" style="padding-top: 50px;">
+              <div class="d-flex flex-column">
+                <div class="w-100 align-items-center d-flex flex-column jusify-content-center" style="position: relative;">
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm" style="background-color: white;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                      Focus Group
+                    </p>
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm align-self-end" style="background-color: white;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                      Interviews
+                    </p>
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm align-self-start" style="background-color: white; margin-left: 10%; margin-top: -4%;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                      User Testing
+                    </p>
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm" style="background-color: white; margin-top: -4%;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 20px; white-space: nowrap;" class="p-0 m-0">
+                      Useability Testing
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <img class="col-md-12 mt-4" src="./images/live-conversation.png" alt="logo" />
+                </div>
+                <div class="w-100 align-items-center d-flex flex-column jusify-content-center mt-3" style="position: relative;">
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm" style="background-color: white;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                      Focus Group
+                    </p>
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 py-3 shadow-sm align-self-end" style="background-color: white; margin-right: 7%;">
+                    <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                      Interviews
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position: absolute; bottom: 0;">
+            <div class="d-flex flex-column mx-5 p-2 pe-5 req-section">
+              <span style="font-size: 22px; color: #383838; opacity: 0.4;">
+                Any Requirements?
+              </span>
+              <span style="font-size: 20px; font-weight: 500;">
+                Call +01-878787-12345
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="image" data-key="2">
+        <section>
+          <div class="row p-2 px-4" id="landing-2">
+            <div class="landing-1-description p-2 col-md-6">
+              <div class="header col-md-3">
+                <div class="d-flex flex-row" style="position: relative;">
+                  <img class="logo-img col-md-9" src="./images/Fahm-logos_black.png" alt="logo" />
+                  <div class="logo-side"></div>
+                </div>
+                <div class="col-md-12">
+                  <hr class="logo-bottom">
+                </div>
+              </div>
+              <div class="landing-1-description px-3 mt-4">
+                <div class="center-hr-line">
+                </div>
+                <div class="bottom-hr-line">
+                </div>
+                <h1 style="color: #383838; font-size: 2vw;">
+                  Understanding your customers like never before
+                </h1>
+                <h1 style="font-size: 7vw; color: #ee3f0a; line-height: 100%;">
+                  Analytics Data Strategy
+                </h1>
+                <p style="font-size: 22px; color: #383838;">
+                  We're a data analysis agency specializing in harnessing the power of Google Analytics, Google Tag Manager, Contentsquare or any other analytics app.  <br>
+                  <br>
+                We go beyond basic reporting, diving deep to uncover hidden patterns, user behavior trends, and actionable insights that fuel growth and understand user behavior.
+                </p>
+                <div class="buttons d-flex flex-row">
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                  <div class="mx-2">
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- images section of Lanidng-1 -->
+            <div class="landing-1-assets col-md-6 h-100 jusify-content-center align-items-center">
+              <div class="d-flex flex-column">
+                <div class="w-100 align-items-center d-flex flex-column jusify-content-center" style="position: relative;">
+                  <div class="col-md-2 text-center p-2 py-3 align-self-end">
+                    <img class="col-md-12 mt-4" src="./images/google-tag-manager.png" alt="logo" />
+                  </div>
+                  <div class="col-md-3 text-center p-2 py-3" style="margin-top: -10%;">
+                    <img class="col-md-12 mt-4" src="./images/Logo_Google_Analytics.svg.png" alt="logo" />
+                  </div>
+                </div>
+                <div>
+                  <img class="col-md-12 mt-4" src="./images/GA-1024x558.png" alt="logo" />
+                </div>
+                <div class="w-100 align-items-center d-flex flex-column jusify-content-center mt-3" style="margin-left: -10%;">
+                  <div class="col-md-3 text-center p-2 py-3" >
+                    <img class="col-md-12 mt-4" src="./images/LOGO_content_square-2.png" alt="logo" />
+                  </div>
+                  <div class="col-md-3 text-center p-2 py-3 align-self-center" style="margin-left: 50%;">
+                    <img class="col-md-12" src="./images/Piano_Analytics.png" alt="logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position: absolute; bottom: 0;">
+            <div class="d-flex flex-column mx-5 p-2 pe-5 req-section">
+              <span style="font-size: 22px; color: #383838; opacity: 0.4;">
+                Any Requirements?
+              </span>
+              <span style="font-size: 20px; font-weight: 500;">
+                Call +01-878787-12345
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="image" data-key="3">
+        <section>
+          <div class="row p-2 px-4" id="landing-2">
+            <div class="landing-1-description p-2 col-md-6">
+              <div class="header col-md-3">
+                <div class="d-flex flex-row" style="position: relative;">
+                  <img class="logo-img col-md-9" src="./images/Fahm-logos_black.png" alt="logo" />
+                  <div class="logo-side"></div>
+                </div>
+                <div class="col-md-12">
+                  <hr class="logo-bottom">
+                </div>
+              </div>
+              <div class="landing-1-description px-3 mt-4">
+                <div class="center-hr-line">
+                </div>
+                <div class="bottom-hr-line">
+                </div>
+                <h1 style="color: #383838; font-size: 2vw;">
+                  We Belive
+                </h1>
+                <h1 style="font-size: 7vw; color: #ee3f0a; line-height: 100%;">
+                  Exceptional <br> UX Design
+                </h1>
+                <h1 style="color: #383838; font-size: 2vw;">
+                  is the key to building products people love to use
+                </h1>
+                <p style="font-size: 22px; color: #383838;">
+                  We're obsessed with user-centricity. Through in-depth user research and a data-driven approach, we create intuitive, engaging experiences that drive user satisfaction and business success.
+                  We help business to create a seamless user experience that paves the way for effortless conversions. We design interfaces that guide users intuitively towards desired actions. 
+                </p>
+                <div class="buttons d-flex flex-row">
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                  <div class="mx-2">
+                  </div>
+                  <div class="btn-shadow col-md-3 text-center p-2 shadow-sm" style="background-color: #fff0dd;">
+                    <p style="color: #ee3f0a; font-size: 20px;" class="p-0 m-0">
+                      Contact Us
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- images section of Lanidng-1 -->
+            <div class="landing-4-assets col-md-6 h-100 jusify-content-center align-items-center" style="margin-top: 100px;">
+              <div class="d-flex flex-row col-md-12 me-2">
+                <div class="d-flex flex-column col-md-4 jusify-content-center align-items-center">
+                  <img class="col-md-10" src="./images/side-view-man-working-with-post-its.png" alt="logo" />
+                  <div class="col-md-8 d-flex flex-column mt-2">
+                    <div class="btn-shadow text-center p-2 py-3  align-self-start" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        User Research
+                      </p>
+                    </div>
+                    <div class="btn-shadow text-center p-2 py-3  align-self-end" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        Focus
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-column col-md-4 jusify-content-center align-items-center">
+                  <div class="col-md-8 d-flex flex-column mt-2">
+                    <div class="btn-shadow text-center p-2 py-3  align-self-start" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        Benchmark
+                      </p>
+                    </div>
+                    <div class="btn-shadow text-center p-2 py-3  align-self-end" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        Wireframe
+                      </p>
+                    </div>
+                  </div>
+                  <img class="col-md-10" src="./images/female-hands-holding-touchpad-with-presentation.png" alt="logo" />
+                </div>
+                <div class="d-flex flex-column col-md-4 jusify-content-center align-items-center">
+                  <img class="col-md-10" src="./images/9427323_4157018.png" alt="logo" />
+                  <div class="col-md-8 d-flex flex-column mt-2">
+                    <div class="btn-shadow text-center p-2 py-3  align-self-start" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        Mockups
+                      </p>
+                    </div>
+                    <div class="btn-shadow text-center p-2 py-3  align-self-end" style="background-color: white;">
+                      <p style="color: #383838; opacity: 0.400; font-size: 22px; white-space: nowrap;" class="p-0 m-0">
+                        User Testing
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position: absolute; bottom: 0;">
+            <div class="d-flex flex-column mx-5 p-2 pe-5 req-section">
+              <span style="font-size: 22px; color: #383838; opacity: 0.4;">
+                Any Requirements?
+              </span>
+              <span style="font-size: 20px; font-weight: 500;">
+                Call +01-878787-12345
+              </span>
+            </div>
+          </div>
+          <!-- Image Gallery -->
+          <div style="position: absolute; bottom: 0; left: 20%;">
+            <div class="d-flex flex-row col-md-10 mx-5 p-2 pe-5 image-gallery justify-content-between align-items-center">
+                <img style="width: 10%; height: 10%;" src="./images/EY_logo_2019.svg.png" alt="logo" />
+                <img style="width: 10%; height: 10%;" src="./images/unnamed.png" alt="logo" />
+                <img style="width: 10%; height: 10%;" src="./images/Orange_Business_Services_logo_(left).svg.png" alt="logo" />
+                <img style="width: 10%; height: 10%;" src="./images/BMO_logo_clr_600x400.d856adee5b77fce7b185d60cb2ff3136c6bff2ad.png" alt="logo" />
+                <img style="width: 10%; height: 10%;" src="./images/Air_France_Logo.svg.png" alt="logo" />
+            </div>
         </div>
+        
+
+        </section>
       </div>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>
