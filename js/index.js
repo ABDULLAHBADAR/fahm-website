@@ -1,14 +1,56 @@
 console.clear();
+// modal related changes
 
-      const slider = document.querySelector(".slider");
+try {
+  var modal = document.getElementById("myModal");
 
-      const allImages = Array.from(document.querySelectorAll(".slider .image"));
-      let state = {
+  // Get all buttons that open the modal
+  var buttons = document.getElementsByClassName("modalBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // Function to open the modal
+  function openModal() {
+      modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+      modal.style.display = "none";
+  }
+
+  // When any button with class myBtn is clicked, open the modal
+  for (var i = 0; i < buttons.length; i++) {
+      buttons[i].onclick = openModal;
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = closeModal;
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          closeModal();
+      }
+  }
+} catch (error) {
+  console.log("An error occurred:", error);
+}
+
+
+
+
+// slider chamges
+      var slider = document.querySelector(".slider");
+
+      var allImages = Array.from(document.querySelectorAll(".slider .image"));
+      var state = {
         photo: 0,
         animationActive: false,
       };
 
-      const elStatus = Array.from(document.querySelectorAll(".slider .stat"));
+      var elStatus = Array.from(document.querySelectorAll(".slider .stat"));
       elStatus.forEach((stat) => {
         stat.addEventListener("click", () => {
           if (!state.animationActive) {
@@ -27,7 +69,7 @@ console.clear();
       mc.on("panup pandown", function (ev) {
         if (!state.animationActive) {
           state.animationActive = true;
-          let dir = 1;
+          var dir = 1;
           if (ev.type == "panup") {
             dir = -1;
           }
@@ -42,7 +84,7 @@ console.clear();
         e.stopPropagation();
         if (!state.animationActive) {
           state.animationActive = true;
-          let dir = Math.sign(e.deltaY);
+          var dir = Math.sign(e.deltaY);
           var next = state.photo + dir;
           var current = state.photo;
           slide(next, current);
@@ -228,7 +270,7 @@ console.clear();
           textInFromBottom.play();
         }
         state.photo = toSlide;
-        let statusPoint = document.querySelector(".slider .point");
+        var statusPoint = document.querySelector(".slider .point");
         statusPoint.dataset.current = toSlide;
       }
 
