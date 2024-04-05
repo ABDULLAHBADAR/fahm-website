@@ -109,6 +109,14 @@ body {
   top: 104px;
 }
 
+.slider .status .point[data-current='6'] {
+  top: 124px;
+}
+
+.slider .status .point[data-current='7'] {
+  top: 144px;
+}
+
 .slider .status .stat {
   width: 10px;
   height: 10px;
@@ -180,13 +188,6 @@ body {
   opacity: 1;
 }
 
-/* Media Queries */
-@media (max-width: 960px) {
-  .text-xxl {
-    font-size: 2.5rem;
-  }
-}
-
 .logo-bottom {
   height: 2px;
   border: none;
@@ -205,7 +206,6 @@ body {
   background-color: #111;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 5%, black);
   right: 20px;
-  /* top: -30px; */
   height: 125%;
 }
 
@@ -216,7 +216,7 @@ body {
   border: none;
   background: linear-gradient(to left, rgba(0, 0, 0, 0) 5%, black);
   right: -3%;
-  top: 3%;
+  /* top: 1%; */
   /* z-index: 11; */
 }
 
@@ -244,8 +244,53 @@ body {
                 linear-gradient(to bottom, rgba(0, 0, 0, 0) 5%, black) 1;
 } */
 
-/* @media (max-width: 780px) {
-  body{
+
+/* Chnages related to responsiveness */
+.screen-sm {
+  display: none;
+}
+
+.screen-md{
+  display: none;
+}
+
+.para-text {
+  font-size: 20px;
+}
+
+.hover-img {
+  transition: 0.3s;
+}
+.hover-img:hover {
+  transform: translate(0, -10px);
+}
+
+.btn-shadow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  z-index: 1050; /* or any value higher than the z-index of the elements causing the issue */
+}
+
+/* Media Queries */
+@media (max-width: 1500px) {
+  .para-text {
+    font-size: 17px
+  }
+}
+
+@media (min-width: 1500px) {
+  .para-text {
+    font-size: 20px
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* body{
     height: auto;
     overflow: scroll;
   }
@@ -256,5 +301,49 @@ body {
   .slider .image {
     height: auto;
     overflow: scroll;
+  } */
+  .center-hr-line{
+    display: none;
   }
-} */
+}
+
+
+
+/* modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

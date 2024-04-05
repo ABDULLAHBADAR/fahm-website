@@ -1,56 +1,137 @@
-console.clear();
-// modal related changes
-
-try {
-  var modal = document.getElementById("myModal");
-
-  // Get all buttons that open the modal
-  var buttons = document.getElementsByClassName("modalBtn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // Function to open the modal
-  function openModal() {
-      modal.style.display = "block";
-  }
-
-  // Function to close the modal
-  function closeModal() {
-      modal.style.display = "none";
-  }
-
-  // When any button with class myBtn is clicked, open the modal
-  for (var i = 0; i < buttons.length; i++) {
-      buttons[i].onclick = openModal;
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = closeModal;
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          closeModal();
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+      .modal {
+        z-index: 1050; /* or any value higher than the z-index of the elements causing the issue */
       }
-  }
-} catch (error) {
-  console.log("An error occurred:", error);
-}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
 
 
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"
+      integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="slider" data-state="0">
+      <div class="status">
+        <div class="point" data-current="0"></div>
+        <div class="stat" data-key="0"></div>
+        <div class="stat" data-key="1"></div>
+        <div class="stat" data-key="2"></div>
+        <div class="stat" data-key="3"></div>
+        <div class="stat" data-key="4"></div>
+        <div class="stat" data-key="5"></div>
+      </div>
 
-// slider chamges
-      var slider = document.querySelector(".slider");
+      <div class="text">
+        <div class="current" data-key="0"></div>
+        <div data-key="1"></div>
+        <div data-key="2"></div>
+        <div data-key="3"></div>
+        <div data-key="4"></div>
+        <div data-key="5"></div>
+      </div>
 
-      var allImages = Array.from(document.querySelectorAll(".slider .image"));
-      var state = {
+      <div class="image current" data-key="0">
+        <img
+          src="https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+      <div class="image" data-key="1">
+        <img
+          src="https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+      <div class="image" data-key="2">
+        <img
+          src="https://images.unsplash.com/photo-1495566273813-b897730c1d3d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+      <div class="image" data-key="3">
+        <img
+          src="https://images.unsplash.com/photo-1497450526346-652d470c83a9?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+      <div class="image" data-key="4">
+        <img
+          src="https://images.unsplash.com/photo-1571489730822-0c7332fb10ab?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+      <div class="image" data-key="5">
+        <img
+          src="https://images.unsplash.com/photo-1563112605-04054b77e22d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt=""
+        />
+      </div>
+    </div>
+    <script>
+      console.clear();
+
+      const slider = document.querySelector(".slider");
+
+      const allImages = Array.from(document.querySelectorAll(".slider .image"));
+      let state = {
         photo: 0,
         animationActive: false,
       };
 
-      var elStatus = Array.from(document.querySelectorAll(".slider .stat"));
+      const elStatus = Array.from(document.querySelectorAll(".slider .stat"));
       elStatus.forEach((stat) => {
         stat.addEventListener("click", () => {
           if (!state.animationActive) {
@@ -69,7 +150,7 @@ try {
       mc.on("panup pandown", function (ev) {
         if (!state.animationActive) {
           state.animationActive = true;
-          var dir = 1;
+          let dir = 1;
           if (ev.type == "panup") {
             dir = -1;
           }
@@ -84,7 +165,7 @@ try {
         e.stopPropagation();
         if (!state.animationActive) {
           state.animationActive = true;
-          var dir = Math.sign(e.deltaY);
+          let dir = Math.sign(e.deltaY);
           var next = state.photo + dir;
           var current = state.photo;
           slide(next, current);
@@ -270,7 +351,7 @@ try {
           textInFromBottom.play();
         }
         state.photo = toSlide;
-        var statusPoint = document.querySelector(".slider .point");
+        let statusPoint = document.querySelector(".slider .point");
         statusPoint.dataset.current = toSlide;
       }
 
@@ -279,3 +360,6 @@ try {
         targets: allImg,
         scale: 1.4,
       });
+    </script>
+  </body>
+</html> -->
