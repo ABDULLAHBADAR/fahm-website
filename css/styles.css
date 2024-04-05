@@ -290,24 +290,60 @@ body {
 
 
 @media (max-width: 768px) {
-  /* body{
-    height: auto;
-    overflow: scroll;
-  }
-  .slider{
-    height: 100vh;
-    overflow: scroll;
-  }
-  .slider .image {
-    height: auto;
-    overflow: scroll;
-  } */
   .center-hr-line{
     display: none;
   }
+  .logo-img{
+    max-width: 140px !important;
+  }
 }
 
+.head-1 {
+  font-size: 2.5vw;
+}
 
+.head-2 {
+  font-size: 8vw;
+}
+
+@media screen and (min-width: 768px) and (max-height: 825px) {
+  .head-1 {
+    font-size: 1.5vw !important;
+  }
+
+  .head-2 {
+    font-size: 5.5vw !important;
+  }
+
+  .para-text {
+    font-size: 17px !important;
+  }
+
+  .logo-img{
+    max-width: 140px !important;
+  }
+  .img-0{
+    max-width: 100px;
+  }
+  .img-1 {
+    max-width: 350px;
+  }
+  .img-2{
+    max-width: 450px;
+  }
+  .img-4{
+    max-width: 520px;
+  }
+  .img-5{
+    max-width: 520px;
+  }
+}
+
+/* @media screen and (min-width: 768px) and (min-height: 815px) {
+  .head-1 {
+    font-size: 2.5vw;
+  }
+} */
 
 /* modal styles */
 .modal {
