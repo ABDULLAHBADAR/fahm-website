@@ -288,16 +288,6 @@ body {
   }
 }
 
-
-@media (max-width: 768px) {
-  .center-hr-line{
-    display: none;
-  }
-  .logo-img{
-    max-width: 140px !important;
-  }
-}
-
 .head-1 {
   font-size: 2.5vw;
 }
@@ -306,7 +296,19 @@ body {
   font-size: 8vw;
 }
 
-@media screen and (min-width: 768px) and (max-height: 825px) {
+@media (max-width: 768px) {
+  .center-hr-line{
+    display: none;
+  }
+  .logo-img{
+    max-width: 140px !important;
+  }
+  .head-1 {
+    font-size: 4.5vw !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 850px) {
   .head-1 {
     font-size: 1.5vw !important;
   }
