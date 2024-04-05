@@ -79,6 +79,19 @@ try {
         }
       });
 
+      var button = document.getElementById("test");
+      button.addEventListener("click", function(e) {
+        e.stopPropagation();
+        if (!state.animationActive) {
+          state.animationActive = true;
+          // var dir = Math.sign(e.deltaY);
+          var current = state.photo;
+          var next = state.photo + 1;
+          // console.log(next, current, dir, e)
+          slide(next, current);
+        }
+      });
+
       // handling mousewhell
       slider.addEventListener("wheel", function (e) {
         e.stopPropagation();
